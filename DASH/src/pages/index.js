@@ -117,15 +117,74 @@ function HomepageHeader() {
     </header>
   );
 }
+
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
+
+  const features = [
+    {
+      title: "Marcação Rápida",
+      desc: "Marca em poucos segundos, desfruta em poucos minutos com o sistema da DASH.",
+      img: "/img/servicos/restaurant.jpg",
+      link: "/docs/intro"
+    },
+    {
+      title: "Gestão Integrada",
+      desc: "Acompanha o fluxo completo de reservas a partir de um único painel central.",
+      img: "/img/servicos/gestao.jpg",    
+      link: "/docs/intro"
+    },
+    {
+      title: "Para Empresas",
+      desc: "Soluções de agendamento adaptadas ao volume de negócios do seu estabelecimento.",
+      img: "/img/servicos/empresas.jpg",  
+      link: "/docs/intro"
+    },
+    {
+      title: "Segurança Total",
+      desc: "Validação estrita em Python 3.13 para evitar marcações duplicadas ou erradas.",
+      img: "/img/servicos/seguranca.jpg", 
+      link: "/docs/intro"
+    }
+  ];
+
   return (
     <Layout
       title="Início"
       description="DASH - Plataforma de Gestão de Marcação e Agendamento para Clientes e Estabelecimentos">
       <HomepageHeader />
-      <main style={{ padding: '4rem 0'}}>
-        
+      
+      <main>
+        <section className="carousel-section">
+          <div className="container">
+            <h2 className="titulo">Serviços da Dash em Portugal</h2>
+            
+            <div className="carousel-track">
+              {features.map((item, index) => (
+                <div className="card" key={index}>
+                  <img 
+                    src={useBaseUrl(item.img)} 
+                    alt={item.title} 
+                    className="card-bg" 
+                    loading="lazy" 
+                  />
+                  
+                  <div className="card-overlay" />
+                  
+                  <div className="card-content">
+                    <h3>{item.title}</h3>
+                    <p>{item.desc}</p>
+                    <Link className="card-btn" to={item.link}>
+                      Saber mais
+                    </Link>
+                  </div>
+                </div>
+              ))}
+            </div>
+            
+          </div>
+        </section>
+
       </main>
     </Layout>
   );
