@@ -78,7 +78,7 @@ function HomepageHeader() {
             style={{ color: '#fff', 
               fontSize: '3.5rem', 
               fontWeight: 'bold', 
-              textShadow: '0 2px 4px rgb(0, 0, 0)' , 
+              textShadow: '0 2px 4px rgba(0, 0, 0, 0.61)' , 
               width: '100%' , 
               maxWidth: '550px', 
               textAlign: 'left',
@@ -88,35 +88,36 @@ function HomepageHeader() {
         </h1>
         <p className="hero__subtitle" 
            style={{ 
-              color: '#e2e8f0', 
+              color: '#eceeed', 
               fontSize: '1.1rem', 
               margin: '0', 
               maxWidth: '700px', 
               marginLeft: '20%',   
               marginRight: 'auto', 
-              textShadow: '0 2px 4px rgb(0, 0, 0)', 
+              textShadow: '0 2px 4px rgba(0, 0, 0, 0.62)', 
               textAlign: 'left'  
         }}>
-          Abre, marca, qualquer lugar, em qualquer lado. DASH é uma plataforma de gestão de marcação e agendamento que conecta clientes e estabelecimentos de forma simples, rápida e eficiente.
+          Abra, marca, qualquer hora, em qualquer lado. DASH é uma plataforma de gestão de marcação e agendamento que conecta clientes e estabelecimentos de forma simples, rápida e eficiente.
         </p>
         <div style={{ marginTop: '2rem', alignItems: 'start', display: 'flex', marginLeft: '20%' }}>
           <Link
             className="button button--secondary button--lg"
-            to=""
-            style={{marginRight: '15px', fontWeight: 'bold', backgroundColor: '#36a266', color: '#ffffff', borderColor: '#256b44'}}>
-            Intalar a DASH
+            to="docs/intro"
+            style={{marginRight: '15px', fontWeight: 'bold', backgroundColor: '#36a266', color: '#eceeed', borderColor: '#256b44'}}>
+            Instalar a DASH
           </Link>
           <Link
             className="button button--secondary button--lg"
-            to=""
+            to="docs/intro"
             style={{fontWeight: 'bold' , backgroundColor: '#ffffff', color: '#000', borderColor: '#ffffff'}}>
-            Intalar a DASH
+            Instalar a DASH
           </Link>
         </div>
       </div>
     </header>
   );
 }
+
 
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
@@ -184,6 +185,36 @@ export default function Home() {
             
           </div>
         </section>
+
+
+        <section className="about-section">
+          <div className="container">
+            <div className="about-content">
+            
+              <span className="about-badge">Sobre nós</span>
+            
+              <h2 className="about-title">
+                A DASH é a nova plataforma colaborativa de agendamento.
+              </h2>
+              
+              <p className="about-text">
+                Estamos a construir soluções inteligentes para aproximar pessoas e negócios locais. 
+                Oferecemos alternativas eficientes para a gestão de marcações, 
+                incluindo agendamento integrado de serviços, gestão de filas de espera e otimização de recursos.
+              </p>
+              
+              <div>
+                <Link className="about-btn" to="/docs/sobre_nos/missao">
+                  A nossa missão
+                </Link>
+              </div>
+              
+              <img src="/img/missao/cama.png" alt="Imagem de cama" className="about-image" />
+
+            </div>
+          </div>
+        </section>
+
 
       </main>
     </Layout>
