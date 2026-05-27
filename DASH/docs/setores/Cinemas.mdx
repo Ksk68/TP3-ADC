@@ -1,0 +1,29 @@
+---
+sidebar_position: 3
+---
+
+# 🎬 Cinemas e Eventos
+
+---
+
+## 🎟️ Tabela de Estados dos Assentos
+
+O estado de cada cadeira da sala é mapeado dinamicamente na base de dados de acordo com a seguinte matriz de propriedades:
+
+| Código do Estado | Cor na Interface | Significado Lógico | Permite Seleção? | Ação no Clique |
+| :---: | :---: | :--- | :---: | :--- |
+| `0` | Verde | Assento Livre e Higienizado | **SIM** | Inicia contagem de Lock |
+| `1` | Amarelo | Reservado Temporariamente (Em Checkout) | **NÃO** | Mostra aviso de "Vaga em processamento" |
+| `2` | Vermelho | Bilhete Vendido / Ocupado | **NÃO** | Desativado completamente |
+| `3` | Cinzento | Interditado (Manutenção/Acessibilidade) | **NÃO** | Reservado a apoio prioritário |
+
+---
+
+## 📋 Requisitos para Criação de Sessão
+
+Para que uma nova sessão de cinema fique ativa no portal da DASH, o gestor do cinema deve cumprir a seguinte checklist no painel:
+
+- [x] Associar um filme válido com classificação etária correta.
+- [x] Atribuir uma sala física (`Sala 1`, `Sala IMAX`, etc.).
+- [ ] Definir o preço base do bilhete e taxas de reserva.
+- [ ] Publicar a sessão (tornar visível na API dos clientes).
