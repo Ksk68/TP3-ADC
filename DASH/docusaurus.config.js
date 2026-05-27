@@ -13,9 +13,9 @@ const config = {
   title: 'DASH',
   favicon: 'img/logo.ico',
   url: 'https://github.com', // URL do Github
-  baseUrl: '/TP3-ADC/', // Nome do repositorio (entre /) ALTERAR
-  organizationName: 'Ksk68', // Nome do utilizador ALTERAR
-  projectName: 'TP3-ADC', // Nome do repositorio ALTERAR
+  baseUrl: '/TP3-ADC/DASH/', // Nome do repositorio (entre /) 
+  organizationName: 'Ksk68', // Nome do utilizador 
+  projectName: 'TP3-ADC', // Nome do repositorio 
   deploymentBranch: 'gh-pages', // Nome do ramo a ser publicado
   trailingSlash: false, // recomendado para o Github Pages
 
