@@ -1,0 +1,31 @@
+---
+sidebar_position: 2
+---
+
+# 🍽️ Restaurantes e Cafés
+
+> #### Dica de Otimização
+> Configurar turnos com 15 minutos de intervalo entre eles permite que a equipa limpe as mesas sem atrasar a próxima vaga de clientes.
+
+
+---
+
+## 🪑 Configuração de marcação por Turno
+
+A tabela seguinte ilustra a estrutura de dados utilizada para mapear as salas e gerir a capacidade total do estabelecimento:
+
+| Identificador | Zona do Espaço | Capacidade Máxima | Horário do Turno | Tolerância de Atraso |
+| :---: | :--- | :---: | :---: | :---: |
+| `T1-ALM` | Sala Principal | 45 Lugares | 12:00 - 15:00 | 15 minutos |
+| `T2-ESP` | Esplanada Exterior | 20 Lugares | 12:30 - 15:30 | 10 minutos |
+| `T3-JAN` | Sala Principal | 45 Lugares | 19:30 - 23:00 | 20 minutos |
+| `T4-BAL` | Balcão / Bar | 08 Lugares | 19:00 - 00:00 | 05 minutos |
+
+---
+
+## 🔒 Regras de Negócio Críticas
+
+Por esse motivo, o algoritmo em Python executa as seguintes verificações em pirâmide:
+1. **Disponibilidade Física:** Existe alguma mesa livre na zona pretendida?
+2. **Capacidade Humana:** O número total de clientes sentados no turno ultrapassa o limite da cozinha?
+3. **Restrição de Horário:** A cozinha fecha 30 minutos antes do fim do turno?
