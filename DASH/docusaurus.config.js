@@ -77,7 +77,7 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Help',
+            label: 'Documentação',
           },
           {
             href: 'https://github.com/Ksk68/TP3-ADC',
@@ -93,7 +93,7 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Help',
+                label: 'Documentação',
                 to: '/docs/intro',
               },
             ],
