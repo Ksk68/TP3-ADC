@@ -1,0 +1,32 @@
+---
+sidebar_position: 1
+---
+
+# 🏨 Hotéis e Alojamento Local
+
+O módulo de alojamento do **DASH** foi estruturado para gerir fluxos complexos de ocupação por diárias. Ao contrário de marcações por hora, este setor exige persistência de estados ao longo de múltiplos dias.
+
+---
+
+## 📅 Validação de Estadias
+
+A tabela abaixo resume como o motor em Python 3.13 valida os dados inseridos pelo utilizador antes de efetuar o bloqueio do quarto na base de dados:
+
+| Cenário de Input | Validação Lógica | Ação do Sistema 
+| :--- | :---: | :--- |
+| **Check-in &lt; Data Atual** | ❌ Inválido | Rejeita o agendamento imediatamente
+| **Check-out &lt;= Check-in** | ❌ Inválido | Rejeita a submissão do formulário 
+| **Check-in válido + Sem conflitos** |  Válido | Altera o estado do quarto para `RESERVADO` 
+
+---
+
+## 🛠️ Ciclo de Vida de uma Reserva
+
+>#### Informação Técnico 
+> As tarefas abaixo representam os estados que o script de automação corre em segundo plano para garantir o funcionamento do módulo:
+
+
+- [x] Validar consistência do intervalo de datas.
+- [x] Verificar disponibilidade física do quarto.
+- [ ] Processar transação simulada de sinal/caução.
+- [ ] Gerar código único de check-in (Hash SHA-256).
