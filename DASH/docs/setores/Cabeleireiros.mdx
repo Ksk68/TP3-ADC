@@ -1,0 +1,27 @@
+---
+sidebar_position: 4
+---
+
+# 💇 Cabeleireiros e Spas
+
+> #### ⚠️ Alerta de Alocação Dupla
+> É impossível um profissional realizar dois serviços que exijam atenção contínua (ex: corte de cabelo) no mesmo bloco de tempo. No entanto, serviços com tempo de espera (ex: coloração) abrem janelas na agenda.
+
+---
+
+## ⏱️ Matriz de Serviços e Janelas de Tempo
+
+O DASH calcula os intervalos livres cruzando a duração de cada procedimento técnico:
+
+| Serviço | Duração Estimada | Tipo de Atenção | Profissional Elegível | Janela de Encaixe Automatizada? |
+| :--- | :---: | :---: | :--- | :---: |
+| **Corte Masculino** | 30 min | Contínua | Barbeiro / Estilista | ❌ Não permite encaixes |
+| **Coloração Avançada** | 120 min | Intermitente | Colorista Sénior |  Permite (Janela de 45 min no meio) |
+| **Manicure / Gel** | 45 min | Contínua | Técnica de Unhas | ❌ Não permite encaixes |
+| **Massagem Completa** | 60 min | Exclusiva | Terapeuta Spa | ❌ Não permite encaixes |
+
+
+:::warning[Aviso]
+O DASH é uma empresa fictícia em que nem todas as ferramentas estão prontas 
+para fase de lançamento.
+:::
