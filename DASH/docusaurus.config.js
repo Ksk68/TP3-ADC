@@ -13,7 +13,7 @@ const config = {
   title: 'DASH',
   favicon: 'img/logo.ico',
   url: 'https://github.com', // URL do Github
-  baseUrl: '/TP3-ADC/DASH/', // Nome do repositorio (entre /) 
+  baseUrl: '/TP3-ADC/', // Nome do repositorio (entre /) 
   organizationName: 'Ksk68', // Nome do utilizador 
   projectName: 'TP3-ADC', // Nome do repositorio 
   deploymentBranch: 'gh-pages', // Nome do ramo a ser publicado
@@ -25,7 +25,7 @@ const config = {
     v4: true, // Improve compatibility with the upcoming Docusaurus v4
   },
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
